@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(30, 31, 37);
+  color: #edf0f1;
+  padding: 1.1rem;
+}
+
+#navbar ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #edf0f1;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+}
+#navbar .logo {
+  color: aqua;
+}
+
+#navbar ul li a:hover {
+  color: aqua;
+  cursor: pointer;
+}
+@media (max-width: 640px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar .logo {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: aqua;
+  }
+  #navbar ul {
+    padding: 0.5rem;
+  }
+  #navbar ul li a {
+    padding: 0.5rem;
+  }
+  header .header-title {
+    font-size: 30px;
+  }
+}
+
+header {
+  width: 100%;
+  height: 590px;
+  background-image: url("assets/images/home-image.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.header-title {
+  position: absolute;
+  top: 7rem;
+  left: 4rem;
+  letter-spacing: 3px;
+  font-weight: bolder;
+  font-size: 50px;
+  color: #fff;
+  text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
+}
+.header-title > span {
+  color: aqua;
+}
+.search-wrapper {
+  width: 60%;
+  margin: auto;
+  min-width: 300px;
+  height: 3.6rem;
+  position: relative;
+}
+.search-box {
+  width: 100%;
+  position: absolute;
+  background-color: grey;
+  box-shadow: rgba(2, 11, 20, 0.2) 0px 5px 15px;
+  top: -45%;
+  height: 100%;
+}
+.search-card {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding: 0.5rem;
+}
+.search-input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  font-size: 18px;
+}
+.search-button {
+  width: 200px;
+  background: green;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+.search-button:hover {
+  background: black;
+}
+.filter-box {
+  height: auto;
+  font-size: 2.9rem;
+  width: 60%;
+  margin: auto;
+}
+.filter-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.filter-select {
+  border: none;
+  padding: 0.3rem;
+  font-size: 15px;
+}
+.filter-select:hover {
+  background: grey;
+}
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 25px;
+  padding: 30px;
+  gap: 15px;
+}
+.social-icons > a:hover {
+  color: blue;
+}
