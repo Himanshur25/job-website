@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "company": "GKMIT Pvt. Ltd",
+      "logo": "assets/images/gkmit.jpeg",
+      "position": "Senior Frontend Developer",
+      "role": "Frontend",
+      "level": "Senior",
+      "postedAt": "1d ago",
+      "contract": "Full Time",
+      "location": "Udaipur",
+      "culture": ["Good Environment", "Good Learning","NJS"]
+    },
+    {
+      "id": 2,
+      "company": "Amazon",
+      "logo": "assets/images/amazon.png",
+      "position": "Fullstack Developer",
+      "role": "Fullstack",
+      "level": "Midweight",
+      "postedAt": "1 hour ago",
+      "contract": "Part Time",
+      "location": "Remote",
+      "culture": ["Good Environment","Bad Learning","NJS"]
+    },
+    {
+      "id": 3,
+      "company": "Forever Living products",
+      "logo": "assets/images/flp.jpeg",
+      "position": "Digital Marketing",
+      "role": "Frontend",
+      "level": "Junior",
+      "postedAt": "1w ago",
+      "contract": "Part Time",
+      "location": "Remote",
+      "culture": ["Bad Environment","Bad Learning","NJS"]
+     
+    },
+    {
+      "id": 4,
+      "company": "Paytm",
+      "logo": "assets/images/paytm.png",
+      "position": "Junior Frontend Developer",
+      "role": "Frontend",
+      "level": "Junior",
+      "postedAt": "5d ago",
+      "contract": "Full Time",
+      "location": "Mumbai",
+      "culture": ["Bad Environment","Good Learning","JS"]
+    },
+    {
+      "id": 5,
+      "company": "Tesla",
+      "logo": "assets/images/tesla.jpeg",
+      "position": "Software Engineer",
+      "role": "FullStack",
+      "level": "Midweight",
+      "postedAt": "1w ago",
+      "contract": "Full Time",
+      "location": "Los Angeles",
+      "culture": ["Good Environment","Bad Learning","JS"]
+    },
+    {
+      "id": 6,
+      "company": "Elastic Run",
+      "logo": "assets/images/elastic run.jpeg",
+      "position": "Junior Backend Developer",
+      "role": "Backend",
+      "level": "Junior",
+      "postedAt": "2w ago",
+      "contract": "Full Time",
+      "location": "Jaipur",
+      "culture": ["Bad Environment","Bad Learning","NJS"]
+    },
+    {
+      "id": 7,
+      "company": "TCS",
+      "logo": "assets/images/tcs.jpeg",
+      "position": "Junior Developer",
+      "role": "Frontend",
+      "level": "Junior",
+      "postedAt": "2w ago",
+      "contract": "Full Time",
+      "location": "Bangalore",
+      "culture": ["Good Environment","Bad Learning", "JS"]
+    },
+    {
+      "id": 8,
+      "company": "Myntra",
+      "logo": "assets/images/Myntra.png",
+      "position": "Junior Frontend Developer",
+      "role": "Frontend",
+      "level": "Junior",
+      "postedAt": "1mo ago",
+      "contract": "Part Time",
+      "location": "Remote",
+      "culture": ["Good Environment","Good Learning", "JS"]
+    },
+    {
+      "id": 9,
+      "company": "Synopsys",
+      "logo": "assets/images/synopsys.jpeg",
+      "position": "Full Stack Engineer",
+      "role": "Fullstack",
+      "level": "Midweight",
+      "postedAt": "3w ago",
+      "contract": "Full Time",
+      "location": "Hyderabad",
+      "culture": ["Bad Environment","Bad Learning", "JS"]
+    },
+    {
+      "id": 10,
+      "company": "Optum",
+      "logo": "assets/images/optum.png",
+      "position": "Front-end Dev",
+      "role": "Frontend",
+      "level": "Junior",
+      "postedAt": "1d ago",
+      "contract": "Part Time",
+      "location": "New Delhi",
+      "culture": ["Good Environment","Bad Learning", "NJS"]
+    }
+  ]

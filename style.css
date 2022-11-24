@@ -5,6 +5,13 @@
   outline: none;
   font-family: "Times New Roman", Times, serif;
 }
+:root{
+  --DesaturatedDarkCyan: hsl(180, 29%, 50%);
+  --LightGrayishCyanBackground: hsl(180, 52%, 96%);
+  --LightGrayishCyanFilterTablets: hsl(180, 31%, 95%);
+  --DarkGrayishCyan: hsl(180, 8%, 52%);
+  --VeryDarkGrayishCyan: hsl(180, 14%, 20%);
+   }
 
 body {
   width: 100%;
@@ -31,32 +38,12 @@ body {
 }
 #navbar .logo {
   color: aqua;
+  font-size: 25px;
 }
 
 #navbar ul li a:hover {
   color: aqua;
   cursor: pointer;
-}
-@media (max-width: 640px) {
-  #navbar {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #navbar .logo {
-    margin-bottom: 0.5rem;
-    text-align: center;
-    color: aqua;
-  }
-  #navbar ul {
-    padding: 0.5rem;
-  }
-  #navbar ul li a {
-    padding: 0.5rem;
-  }
-  header .header-title {
-    font-size: 30px;
-  }
 }
 
 header {
@@ -91,7 +78,7 @@ header {
 .search-box {
   width: 100%;
   position: absolute;
-  background-color: grey;
+  background-color: #5BA4A4;
   box-shadow: rgba(2, 11, 20, 0.2) 0px 5px 15px;
   top: -45%;
   height: 100%;
@@ -120,32 +107,158 @@ header {
 .search-button:hover {
   background: black;
 }
-.filter-box {
-  height: auto;
-  font-size: 2.9rem;
-  width: 60%;
-  margin: auto;
-}
-.filter-dropdown {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-.filter-select {
-  border: none;
-  padding: 0.3rem;
-  font-size: 15px;
-}
-.filter-select:hover {
-  background: grey;
-}
+
 .social-icons {
   display: flex;
   justify-content: flex-end;
   font-size: 25px;
   padding: 30px;
   gap: 15px;
+  background: none;
+
 }
 .social-icons > a:hover {
   color: blue;
+}
+@media (max-width: 640px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #navbar .logo {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    color: aqua;
+  }
+  #navbar ul {
+    padding: 0.5rem;
+  }
+  #navbar ul li a {
+    padding: 0.5rem;
+  }
+  header .header-title {
+    font-size: 30px;
+  }
+}
+.container{
+  max-width: 1440px;
+  min-width: 375px;
+  margin: 0 auto;
+  }
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+.bg-header{
+  background-color: var(--DesaturatedDarkCyan);
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+  }
+.job-listing{
+  margin-top: 50px;
+}
+.job-cards{
+  border: 2px solid  aqua;
+  border-radius: 27px;
+  margin: 25px auto;
+  width: 80%;
+  height: 130px;
+  padding: 20px;
+  font-size: 15px;
+  }
+  .job-cards:hover{
+    background: lightcyan;
+    transform: scale(1.05);
+    transition: 0.4s;
+  }
+
+.profile-img{
+  width: 70px;
+  height: 70px;
+  }
+
+.company-detail label{
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+  text-transform: uppercase;
+  }
+
+.position{
+  padding: 5px;
+  margin: 5px;
+  font-weight: 700;
+  font-size: 17px;
+  }
+
+.job-work-detail label{
+    opacity: 0.7;
+    padding: 5px;
+    margin: 5px;
+    font-size: 12px;
+  }
+.job-filter{
+  color: var(--DesaturatedDarkCyan);
+ }
+.filter-label{
+  background-color: var(--LightGrayishCyanBackground);
+  padding: 10px;
+  margin: 5px;
+  border-radius:10px ;
+  font-size: 16px;
+  }
+  .filter-label:hover{
+    color:black;
+    cursor: pointer;
+  }
+.filter-label-modal{
+  background-color: var(--LightGrayishCyanBackground);
+  padding: 7px;
+  margin: 5px;
+  color: var(--DesaturatedDarkCyan);
+  font-size: 15px;
+
+  }
+.filter-modal{
+  display: none;
+  height: 70px;
+  background-color: transparent;
+  width: 80%;
+  padding: 15px;
+  margin: -30px auto;
+  position: relative;
+  z-index: 100;
+  top:20px;
+  }
+
+   @media only screen and (max-width: 640px) {
+    .flex{
+      flex-direction: column;
+      align-items: unset;
+    }
+    .job-cards{
+      height: auto;
+    }
+    .profile-img {
+      width: 60px;
+      height: 60px;
+      margin: 0px 0px 0px 30px;
+    }
+    .job-details {
+      margin: 20px;
+    }
+    
+  .job-card-text-right{
+    margin: 10px;
+    padding: 30px;  }
+
+}
+.filter-modal-clear>a{
+list-style: none;
+text-decoration: none;
+font-size: 20px;
 }
