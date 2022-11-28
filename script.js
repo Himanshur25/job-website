@@ -3,12 +3,19 @@ const jobListSection = document.querySelector('.job-listing');
 const filterModal = document.querySelector('.filter-modal');
 const filterModalDetail = document.querySelector('.filter-modal-detail');
 const filterModalClearData = document.querySelector('.clear-data');
+const base_url ='jobs.json';
 
 
 let filterArr = [];
+let filterArr2 = [];
 let filtermodalArr = [];
-fetch('jobs.json').then(res=>res.json())
+fetch(base_url).then(res=>res.json())
 .then(jobData =>{
+      const filteredItem = jobData.filter((item) => {
+        item.level == 'Negative' ? filterArr2.push(item):{};
+      })
+      // console.log(filterArr2)
+      filterArr2.innerHTML=''
       jobData.forEach(jobcardsEl => {
         //Create Element
         const jobCards = document.createElement('div');  
@@ -21,7 +28,6 @@ fetch('jobs.json').then(res=>res.json())
         const companyLb = document.createElement('label'); 
         const position = document.createElement('div'); 
         const jobWorkDetail = document.createElement('div'); 
-        const postedLab = document.createElement('label'); 
         const contractLab = document.createElement('label'); 
         const locationLab = document.createElement('label'); 
         const jobFilter = document.createElement('label');
@@ -41,7 +47,6 @@ fetch('jobs.json').then(res=>res.json())
         profileImg.src=jobcardsEl.logo;
         companyLb.innerHTML = jobcardsEl.company;
         position.innerHTML=jobcardsEl.position;
-        postedLab.innerHTML=jobcardsEl.postedAt;
         contractLab.innerHTML=jobcardsEl.contract;
         locationLab.innerHTML=jobcardsEl.location;
         const jobData =jobcardsEl.culture;
@@ -85,7 +90,7 @@ fetch('jobs.json').then(res=>res.json())
         jobProfile.append(profileImg);
         jobDetails.append(companytDetail,position,jobWorkDetail);
         companytDetail.append(companyLb);
-        jobWorkDetail.append(postedLab,contractLab,locationLab);
+        jobWorkDetail.append(contractLab,locationLab);
         jobCardTextRight.append(jobFilter);
         jobListSection.append(jobCards);
       });
