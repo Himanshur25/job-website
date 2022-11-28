@@ -3,19 +3,12 @@ const jobListSection = document.querySelector('.job-listing');
 const filterModal = document.querySelector('.filter-modal');
 const filterModalDetail = document.querySelector('.filter-modal-detail');
 const filterModalClearData = document.querySelector('.clear-data');
-const base_url ='jobs.json';
 
 
 let filterArr = [];
-let filterArr2 = [];
 let filtermodalArr = [];
-fetch(base_url).then(res=>res.json())
+fetch('jobs.json').then(res=>res.json())
 .then(jobData =>{
-      const filteredItem = jobData.filter((item) => {
-        item.level == 'Negative' ? filterArr2.push(item):{};
-      })
-      // console.log(filterArr2)
-      filterArr2.innerHTML=''
       jobData.forEach(jobcardsEl => {
         //Create Element
         const jobCards = document.createElement('div');  
