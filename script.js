@@ -5,41 +5,30 @@ const filterModalDetail = document.querySelector('.filter-modal-detail');
 const filterModalClearData = document.querySelector('.clear-data');
 
 
-
 let filterArr = [];
 let filtermodalArr = [];
-
-//Get API Data
-async function jobListing() {
-  // read our JSON
-  let response = await fetch('jobs.json');
-  let user = await response.json();
-  return user;
-}
-//Creating Cards
-jobListing().then(jobData =>{
+fetch('jobs.json').then(res=>res.json())
+.then(jobData =>{
       jobData.forEach(jobcardsEl => {
         //Create Element
-        let jobCards = document.createElement('div');  
-        let jobCardTextLeft = document.createElement('div');
-        let jobCardTextRight = document.createElement('div');
-        let jobProfile = document.createElement('div');
-        let profileImg = document.createElement('img');
-        let jobDetails = document.createElement('div'); 
-        let companytDetail = document.createElement('div');
-        let companyLb = document.createElement('label'); 
-        let position = document.createElement('div'); 
-        let jobWorkDetail = document.createElement('div'); 
-        let postedLab = document.createElement('label'); 
-        let contractLab = document.createElement('label'); 
-        let locationLab = document.createElement('label'); 
-        let jobFilter = document.createElement('label');
+        const jobCards = document.createElement('div');  
+        const jobCardTextLeft = document.createElement('div');
+        const jobCardTextRight = document.createElement('div');
+        const jobProfile = document.createElement('div');
+        const profileImg = document.createElement('img');
+        const jobDetails = document.createElement('div'); 
+        const companytDetail = document.createElement('div');
+        const companyLb = document.createElement('label'); 
+        const position = document.createElement('div'); 
+        const jobWorkDetail = document.createElement('div'); 
+        const postedLab = document.createElement('label'); 
+        const contractLab = document.createElement('label'); 
+        const locationLab = document.createElement('label'); 
+        const jobFilter = document.createElement('label');
         //Add Element Class Name
         jobDetails.classList.add('job-details');
-        jobCards.classList.add('job-cards');
-        jobCards.classList.add('flex');
-        jobCardTextLeft.classList.add('job-card-text-left');
-        jobCardTextLeft.classList.add('flex');
+        jobCards.classList.add('job-cards', 'flex');
+        jobCardTextLeft.classList.add('job-card-text-left','flex');
         jobCardTextRight.classList.add('job-card-text-right');
         jobProfile.classList.add('job-profile');
         profileImg.classList.add('profile-img');
@@ -55,10 +44,10 @@ jobListing().then(jobData =>{
         postedLab.innerHTML=jobcardsEl.postedAt;
         contractLab.innerHTML=jobcardsEl.contract;
         locationLab.innerHTML=jobcardsEl.location;
-        let jobData =jobcardsEl.culture;
+        const jobData =jobcardsEl.culture;
 
         jobData.forEach(jobDataEl=>{                     //culture
-          let filterLab = document.createElement('label');
+          const filterLab = document.createElement('label');
           filterLab.classList.add('filter-label');
           filterLab.innerHTML=jobDataEl;
       
@@ -75,32 +64,55 @@ jobListing().then(jobData =>{
               filterModalIcon.innerHTML=`<i class="fa fa-times"></i>`;
               filtermodalArr.push(e.target.firstChild.data);
               filterModalLab.innerHTML=e.target.firstChild.data;
-              filterModalLab.appendChild(filterModalIcon);
+              filterModalLab.append(filterModalIcon);
               filterModalLab.classList.add('filter-label-modal');
               filterModalDetail.append(filterModalLab);
-              filterData();
+             filterData()
+              filterModalIcon.addEventListener('click',(e)=>{
+                e.target.parentElement.parentElement.remove();
+                removText = e.target.parentElement.previousSibling.data;
+                filtermodalArr.splice(filtermodalArr.indexOf(removText),1);
+                filterData();
+              })
             }           
           }) 
-          jobFilter.append( filterLab);
+          jobFilter.append(filterLab);
         })
        
         //Append
-        jobCards.appendChild(jobCardTextLeft);
-        jobCardTextLeft.appendChild(jobProfile);
-        jobProfile.appendChild(profileImg);
-        jobDetails.appendChild(companytDetail);
-        companytDetail.appendChild(companyLb);
-        jobDetails.appendChild(position);
-        jobDetails.appendChild(jobWorkDetail);
-        jobWorkDetail.appendChild(postedLab);
-        jobWorkDetail.appendChild(contractLab);
-        jobWorkDetail.appendChild(locationLab);
-        jobCardTextLeft.appendChild(jobDetails);
-        jobCards.appendChild(jobCardTextRight);
-        jobCardTextRight.appendChild(jobFilter);
-        jobListSection.appendChild(jobCards);
+        jobCards.append(jobCardTextLeft, jobCardTextRight);
+        jobCardTextLeft.append(jobProfile,jobDetails);
+        jobProfile.append(profileImg);
+        jobDetails.append(companytDetail,position,jobWorkDetail);
+        companytDetail.append(companyLb);
+        jobWorkDetail.append(postedLab,contractLab,locationLab);
+        jobCardTextRight.append(jobFilter);
+        jobListSection.append(jobCards);
       });
    }) 
+   function filterData(){
+    //filter Data
+          const allJobCards = document.querySelectorAll('.job-cards');
+          allJobCards.forEach(itemEl=>{
+                let labelArr= [];
+                itemEl.childNodes[1].childNodes[0].childNodes.forEach(sinaglItem =>{
+                labelArr.push(sinaglItem.childNodes[0].data);
+                });
+                let flag=0;
+              filtermodalArr.forEach(modalarrEL=>{
+                if(flag==0){
+                    if(labelArr.indexOf(modalarrEL)==-1){
+                      flag=1;
+                    }
+                  }
+              });
+              if(flag==1){
+                itemEl.style.display='none';
+              }else{
+                itemEl.style.display='flex';
+              }
+          });//close itemEl;
+    }
 
  //Clear filtermodal box
  filterModalClearData.addEventListener('click',()=>{
@@ -109,4 +121,3 @@ jobListing().then(jobData =>{
   filterModalClearData.remove();
   filterData();
 })
-
