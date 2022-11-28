@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "company": "GKMIT Pvt. Ltd",
+      "logo": "assets/images/gkmit.jpeg",
+      "position": "Sr. Frontend Developer",
+      "role": "Frontend",
+      "level": "Negative",
+      "contract": "Full Time",
+      "location": "Udaipur",
+      "culture": ["Salary", "Learning","Challenges"]
+    },
+    {
+      "id": 2,
+      "company": "Amazon",
+      "logo": "assets/images/amazon.png",
+      "position": "Fullstack Developer",
+      "role": "Fullstack",
+      "level": "Frontend",
+      "contract": "Part Time",
+      "location": "Remote",
+      "culture": ["Salary","MNC","NJS"]
+    },
+    {
+      "id": 3,
+      "company": "FLP",
+      "logo": "assets/images/flp.jpeg",
+      "position": "Digital Marketing",
+      "role": "Frontend",
+      "level": "Negative",
+      "contract": "Part Time",
+      "location": "Remote",
+      "culture": ["Communication","Creative"]
+     
+    },
+    {
+      "id": 4,
+      "company": "Paytm",
+      "logo": "assets/images/paytm.png",
+      "position": "Jr. Frontend Developer",
+      "role": "Frontend",
+      "level": "Junior",
+      "contract": "Full Time",
+      "location": "Mumbai",
+      "culture": ["Easy","Skillful","Flexible"]
+    }
+]
