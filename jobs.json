@@ -1,12 +1,12 @@
+
 [
   {
     "id": 1,
     "company": "GKMIT Pvt. Ltd",
     "logo": "assets/images/gkmit.jpeg",
-    "position": "Senior Frontend Developer",
+    "position": "Sr. Frontend Developer",
     "role": "Frontend",
-    "level": "Senior",
-    "postedAt": "1d ago",
+    "level": "Negative",
     "contract": "Full Time",
     "location": "Udaipur",
     "culture": ["Salary", "Learning","Challenges"]
@@ -17,20 +17,18 @@
     "logo": "assets/images/amazon.png",
     "position": "Fullstack Developer",
     "role": "Fullstack",
-    "level": "Midweight",
-    "postedAt": "1 hour ago",
+    "level": "Frontend",
     "contract": "Part Time",
     "location": "Remote",
     "culture": ["Salary","MNC","NJS"]
   },
   {
     "id": 3,
-    "company": "Forever Living products",
+    "company": "FLP",
     "logo": "assets/images/flp.jpeg",
     "position": "Digital Marketing",
     "role": "Frontend",
-    "level": "Junior",
-    "postedAt": "1w ago",
+    "level": "Negative",
     "contract": "Part Time",
     "location": "Remote",
     "culture": ["Communication","Creative"]
@@ -40,10 +38,9 @@
     "id": 4,
     "company": "Paytm",
     "logo": "assets/images/paytm.png",
-    "position": "Junior Frontend Developer",
+    "position": "Jr. Frontend Developer",
     "role": "Frontend",
     "level": "Junior",
-    "postedAt": "5d ago",
     "contract": "Full Time",
     "location": "Mumbai",
     "culture": ["Easy","Skillful","Flexible"]
@@ -55,7 +52,6 @@
     "position": "Software Engineer",
     "role": "FullStack",
     "level": "Midweight",
-    "postedAt": "1w ago",
     "contract": "Full Time",
     "location": "Los Angeles",
     "culture": ["MNC","Salary","Environment"]
@@ -64,10 +60,9 @@
     "id": 6,
     "company": "Elastic Run",
     "logo": "assets/images/elastic run.jpeg",
-    "position": "Junior Backend Developer",
+    "position": "Jr. Backend Developer",
     "role": "Backend",
     "level": "Junior",
-    "postedAt": "2w ago",
     "contract": "Full Time",
     "location": "Jaipur",
     "culture": ["Local","Challenges","NJS"]
@@ -78,8 +73,7 @@
     "logo": "assets/images/tcs.webp",
     "position": "Junior Developer",
     "role": "Frontend",
-    "level": "Junior",
-    "postedAt": "2w ago",
+    "level": "Negative",
     "contract": "Full Time",
     "location": "Bangalore",
     "culture": ["No workload","MNC", "JS"]
@@ -88,10 +82,9 @@
     "id": 8,
     "company": "Myntra",
     "logo": "assets/images/Myntra.png",
-    "position": "Junior Frontend Developer",
+    "position": "Jr. Frontend Developer",
     "role": "Frontend",
     "level": "Junior",
-    "postedAt": "1mo ago",
     "contract": "Part Time",
     "location": "Remote",
     "culture": ["Environment","Communication","Skillful"]
@@ -102,8 +95,7 @@
     "logo": "assets/images/synopsys.png",
     "position": "Full Stack Engineer",
     "role": "Fullstack",
-    "level": "Midweight",
-    "postedAt": "3w ago",
+    "level": "Negative",
     "contract": "Full Time",
     "location": "Hyderabad",
     "culture": ["MNC","Skillful", "Learning"]
@@ -112,10 +104,9 @@
     "id": 10,
     "company": "Optum",
     "logo": "assets/images/optum.png",
-    "position": "Front-end Dev",
+    "position": "Front-End Dev",
     "role": "Frontend",
     "level": "Junior",
-    "postedAt": "1d ago",
     "contract": "Part Time",
     "location": "New Delhi",
     "culture": ["Salary","Learning","JS"]
@@ -127,7 +118,6 @@
     "position": "React Developer",
     "role": "Frontend",
     "level": "Senior",
-    "postedAt": "1min ago",
     "contract": "Full Time",
     "location": "Bangalore",
     "culture": ["No workload","MNC","JS"]
@@ -139,7 +129,6 @@
     "position": "NodeJS Developer",
     "role": "Backend",
     "level": "Junior",
-    "postedAt": "1m ago",
     "contract": "Full Time",
     "location": "Jaipur",
     "culture": ["Creative","Technical","Learning"]
@@ -150,8 +139,7 @@
     "logo": "assets/images/cloud mentor.jpeg",
     "position": "Software Engineer",
     "role": "FullStack",
-    "level": "Senior",
-    "postedAt": "1w ago",
+    "level": "Negative",
     "contract": "Part Time",
     "location": "Surat",
     "culture": ["Skillful","Technical","Knowledge"]

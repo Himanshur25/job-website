@@ -1,9 +1,10 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   outline: none;
-  font-family: "Times New Roman", Times, serif;
+  font-family:'poppins';
   scroll-behavior:smooth;
 }
 
@@ -25,6 +26,7 @@ body {
   background: rgb(30, 31, 37);
   color: #edf0f1;
   padding: 1.1rem;
+  position: sticky;
 }
 
 #navbar ul {
@@ -64,11 +66,13 @@ header {
   letter-spacing: 3px;
   font-weight: bolder;
   font-size: 50px;
+  line-height: 60px;
   color: #fff;
   text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
 }
 .header-title > span {
   color: aqua;
+  font-weight: bold;
 }
 .search-wrapper {
   width: 60%;
@@ -133,7 +137,7 @@ color: blue;
 .fa-youtube{
   color:red;
 }
-@media (max-width: 620px) {
+@media (max-width: 640px) {
   #navbar {
     flex-direction: column;
     align-items: center;
@@ -252,7 +256,7 @@ color: blue;
   top:20px;
   }
 
-   @media only screen and (max-width: 620px) {
+   @media only screen and (max-width: 640px) {
     .flex{
       flex-direction: column;
       align-items: unset;
@@ -311,10 +315,12 @@ font-size: 20px;
 .team{
   display: flex;
   justify-content: center;
-  width: auto;
+  width:95%;
   text-align: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 30px;
+  padding: 20px;
+  margin-left: 2%;
 }
 
 .team .team-member{
